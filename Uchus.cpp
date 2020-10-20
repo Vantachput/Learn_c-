@@ -1,4 +1,4 @@
-﻿/*#include <iostream>
+#include <iostream>
 using namespace std;
 #include <math.h>
 #include <fstream>
@@ -10,8 +10,8 @@ using namespace std;
 #pragma hdrstop
 
 #define MAX(x,y,c) {
-	
-} 
+
+}
  int main() {
 	int a = 10;
 	int b = 20;
@@ -23,7 +23,7 @@ using namespace std;
 	int z = 0;
 	bool lol = true;
 	bool none_lol = false;
-	ifstream fout; 
+	ifstream fout;
 
 	 for (int i = 0; i < 3;++i) {
 		int m;
@@ -40,7 +40,7 @@ using namespace std;
 				z += 1;
 			}
 		}
-	} 
+	}
 	 while (true) {
 		int m, lsp;
 		char n = '0';
@@ -100,7 +100,7 @@ using namespace std;
 			}
 		}
 	}
-} 
+}
  bool found = 0;
 x = 290;
 for (double i = 1; i * i < x; ++i)
@@ -115,7 +115,7 @@ for (double i = 1; i * i < x; ++i)
 		}
 	}
 	if (found) // выходим из внешнего цикла
-		break; 
+		break;
 		 int x, p, answer = 0;
 		cin >> x;
 		cin >> p;
@@ -127,20 +127,20 @@ for (double i = 1; i * i < x; ++i)
 		answer = x;
 		if (p == 0) answer = 1;
 
-		return answer; 
+		return answer;
 
- 
+
 	}
-	 
- 
 
 
 
-int max1(int x, int y) 
+
+
+int max1(int x, int y)
 	{
 	return x > y ? x : y;
 }
- 
+
  #include <iostream>
 using namespace std;
 #include <math.h>
@@ -174,7 +174,7 @@ using namespace std;
 		}
 		system("pause");
 		return 0;
-	} 
+	}
 #include <iostream>
 #include <math.h>
 using namespace std;
@@ -272,6 +272,7 @@ int main() {
 		cout << i1 << endl;
 	}
 }
+
 #include <iostream>
 using namespace std;
 
@@ -282,7 +283,7 @@ int main() {
 
 unsigned gcd(unsigned a, unsigned b) {
 	a > b ? gcd(a % b, b) : gcd(a, b % a);
-}*/
+}
 #include <iostream>
 #include <stdio.h>
 using namespace std;
@@ -319,7 +320,7 @@ int max_element(int* p, int* q) {
 		}
 	}
 	return max;
-	
+
 }
 
 int* max_element_2(int* p, int* q) {
@@ -332,6 +333,52 @@ int* max_element_2(int* p, int* q) {
 	return pmax;
 }
 
+
+unsigned strlen(const char* str)
+{
+	int i = 0;
+	const char* p = str;
+	for (; *str != '\0';++str) {
+		i += 1;
+	}
+	return i-1;
+}
+
+
+int len(const char* str){
+	int i = 0;
+	const char* p = str;
+	for (; *str != '\0';++str) {
+		i += 1;
+	}
+return i;
+}
+
+int len_2(char* str) {
+	int i = 0;
+	const char* p = str;
+	for (; *str != '\0';++str) {
+		i += 1;
+	}
+	return i;
+}
+
+
+void m_strcat(char* dst, const char* from) {
+	char* dst_ptr = dst + len_2(dst);
+	cout << *dst_ptr << endl;
+	while (*from != '\0')
+		*dst_ptr++ = *from++;
+	*dst_ptr = '\0';
+	for (int i = 0;i < 50;++i) {
+		cout << *dst_ptr <<" ";
+	}
+}
+
+
+
+
+
 int main() {
 	setlocale(LC_ALL, "eng");
 	int a[5] = {1,20,3,4,5};
@@ -339,6 +386,7 @@ int main() {
 	int c = 20;
 	int* p = a;
 	int* q = &a[b - 1];
-	cout << max_element_2(p, p + b) << " " <<&a[1];
-	return *max_element_2(p, p + b);
+	char i[100] = "Hello,";
+	const char* lol = "Okey0";
+	m_strcat(i, lol);
 }
