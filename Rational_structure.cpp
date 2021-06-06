@@ -55,6 +55,9 @@ struct Rational
 		if ((numerator_ * (NSK / denominator_) - b.numerator_ * (NSK / b.denominator_)) < 0)return true;
 		else return false;
 	}
+	operator double() {
+		return this->to_double();
+	}
 private:
 	int numerator_;
 	int denominator_;
